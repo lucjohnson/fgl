@@ -1,0 +1,5 @@
+.vagrant
+**/secret/*
+data
+node_modules
+typings
