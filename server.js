@@ -3,10 +3,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var dbConfig = require('./secret/config-mongo.json');
+var dbUrl = process.env.DB_URL || require('./secret/config-mongo.json').url;
 var leaderboard = require('./leaderboard');
 
-mongoose.connect(dbConfig.url);
+mongoose.connect(dbUrl);
 mongoose.connection.on('error', function(err) {
     console.error(err);
 });
