@@ -37,6 +37,8 @@ var tournamentIds = ['016', '006', '002', '004', '003', '005', '007', '010', '47
 
 var app = express();
 
+var port = process.env.PORT || 8080;
+
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/static/public'));
@@ -45,6 +47,6 @@ app.use(express.static(__dirname + '/static/public'));
 //     leaderboard.getTournamentData(tourn);
 // });
 
-app.listen(80, function() {
+app.listen(port, function() {
     console.log('server is listening, so tell it what you want. what you really, really want.');
 });
