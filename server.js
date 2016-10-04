@@ -19,6 +19,11 @@ mongoose.connection.on('error', function(err) {
 
 // });
 
+// var subSeasonSchema = new mongoose.Schema({
+//     subSeasonNumber: Number,
+//     tournaments: [tournamentSchema]
+// });
+
 // var seasonSchema = new mongoose.Schema({
 //     year: Number,
 //     tournaments: [tournamentSchema],
